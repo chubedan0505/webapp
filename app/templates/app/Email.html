@@ -1,0 +1,20 @@
+<!-- email_verification.html -->
+{% extends 'app/base.html' %}
+{% load static %}
+{% block email %}
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xác thực đăng ký</title>
+</head>
+<body>
+    {% csrf_token %}
+    <p>Xin chào {{ User.username }},</p>
+    <p>Cảm ơn bạn đã đăng ký tài khoản. Bạn có thể xác thực tài khoản của mình bằng cách nhấp vào liên kết dưới đây:</p>
+    <p><a href="#">Link Xác thực</a></p>
+    <p>Xin cảm ơn!</p>
+</body>
+</html>
+{% endblock email %}
